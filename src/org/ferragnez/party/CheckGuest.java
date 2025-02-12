@@ -20,7 +20,7 @@ public class CheckGuest {
         // int i = 0;
         // while (!bool && i < invited.length) {
             
-        //     // == non funziona bene quando si tratta di stringhe, in quanto non puntano alla stessa memoria
+        //     // == non funziona bene quando si tratta di stringhe, in quanto non sono primitive
         //     if (name.equals(invited[i].toLowerCase())) { 
         //         bool=true;
         //     } else i++;
@@ -30,7 +30,6 @@ public class CheckGuest {
 
         /* CON CICLO FOR */
         for (int i = 0; i < invited.length; i++) {
-            // == non funziona bene quando si tratta di stringhe, in quanto non puntano alla stessa memoria
             if (name.equals(invited[i].toLowerCase())) { 
                 bool=true;
                 break;
