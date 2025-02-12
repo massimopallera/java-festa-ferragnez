@@ -15,15 +15,26 @@ public class CheckGuest {
         sc.close(); // Chiude subito lo scanner in quanto in questo caso non servirà più
 
         boolean bool = false;
-        int i = 0;
-
-        while (!bool && i < invited.length) {
+        
+        /* CON CICLO WHILE */
+        // int i = 0;
+        // while (!bool && i < invited.length) {
             
+        //     // == non funziona bene quando si tratta di stringhe, in quanto non puntano alla stessa memoria
+        //     if (name.equals(invited[i].toLowerCase())) { 
+        //         bool=true;
+        //     } else i++;
+
+        // }
+
+
+        /* CON CICLO FOR */
+        for (int i = 0; i < invited.length; i++) {
             // == non funziona bene quando si tratta di stringhe, in quanto non puntano alla stessa memoria
             if (name.equals(invited[i].toLowerCase())) { 
                 bool=true;
-            } else i++;
-
+                break;
+            }
         }
 
         System.out.println(bool ? "Può entrare" : "Non può entrare");
